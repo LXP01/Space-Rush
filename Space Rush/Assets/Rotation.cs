@@ -5,22 +5,18 @@ using UnityEngine;
 public class Rotation : MonoBehaviour {
 
 
-    // Update is called once per frame
-    void Update()
-    {
 
 
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position; //Subtracting player position with mouse position
-        difference.Normalize();
-        Vector3 rotation1;
-        
+   void Update()
+   {
+       Vector2 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);
+       Vector2 mouseOnScreen = (Vector2)Camera.main.ScreenToViewportPoint(Input.mousePosition);
+       float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
+       transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle+90));
+   }
 
-
-        float rot = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //find angle
-        rotation1.x = 0f; rotation1.y = 0f; rotation1.z = 0+rot;
-        transform.Rotate(rotation1);
-
-        // Debug.Log(rot);
-        Debug.Log(Input.mousePosition);
-    }
+   float AngleBetweenTwoPoints(Vector3 angle1, Vector3 angle2)
+   {return Mathf.Atan2(angle1.y - angle2.y, angle1.x - angle2.x) * Mathf.Rad2Deg; }
+   
 }
+
