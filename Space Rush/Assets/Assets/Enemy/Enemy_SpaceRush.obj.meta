@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 8bf32fd433c4f12409a8c305b6588770
+timeCreated: 1512252383
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: engine_default_19
+    100004: engine_high_7
+    100006: engine_high_9
+    100008: engine_intake_4
+    100010: engine_intake_5
+    100012: engine_intakeArrow_10
+    100014: engine_plane_20
+    100016: glass_curved_3
+    100018: plane_body_0
+    100020: plane_rudderLarge_18
+    100022: ship_frontEdge_6
+    100024: ship_hull_1
+    100026: wing_diagonalFin_11
+    100028: wing_diagonalFin_12
+    100030: wing_diagonalFin_15
+    100032: wing_diagonalFin_16
+    100034: wing_endLong_13
+    100036: wing_endLong_17
+    400000: //RootNode
+    400002: engine_default_19
+    400004: engine_high_7
+    400006: engine_high_9
+    400008: engine_intake_4
+    400010: engine_intake_5
+    400012: engine_intakeArrow_10
+    400014: engine_plane_20
+    400016: glass_curved_3
+    400018: plane_body_0
+    400020: plane_rudderLarge_18
+    400022: ship_frontEdge_6
+    400024: ship_hull_1
+    400026: wing_diagonalFin_11
+    400028: wing_diagonalFin_12
+    400030: wing_diagonalFin_15
+    400032: wing_diagonalFin_16
+    400034: wing_endLong_13
+    400036: wing_endLong_17
+    2300000: engine_default_19
+    2300002: engine_high_7
+    2300004: engine_high_9
+    2300006: engine_intake_4
+    2300008: engine_intake_5
+    2300010: engine_intakeArrow_10
+    2300012: engine_plane_20
+    2300014: glass_curved_3
+    2300016: plane_body_0
+    2300018: plane_rudderLarge_18
+    2300020: ship_frontEdge_6
+    2300022: ship_hull_1
+    2300024: wing_diagonalFin_11
+    2300026: wing_diagonalFin_12
+    2300028: wing_diagonalFin_15
+    2300030: wing_diagonalFin_16
+    2300032: wing_endLong_13
+    2300034: wing_endLong_17
+    3300000: engine_default_19
+    3300002: engine_high_7
+    3300004: engine_high_9
+    3300006: engine_intake_4
+    3300008: engine_intake_5
+    3300010: engine_intakeArrow_10
+    3300012: engine_plane_20
+    3300014: glass_curved_3
+    3300016: plane_body_0
+    3300018: plane_rudderLarge_18
+    3300020: ship_frontEdge_6
+    3300022: ship_hull_1
+    3300024: wing_diagonalFin_11
+    3300026: wing_diagonalFin_12
+    3300028: wing_diagonalFin_15
+    3300030: wing_diagonalFin_16
+    3300032: wing_endLong_13
+    3300034: wing_endLong_17
+    4300000: engine_default_19
+    4300002: engine_high_7
+    4300004: engine_high_9
+    4300006: engine_intake_4
+    4300008: engine_intake_5
+    4300010: engine_intakeArrow_10
+    4300012: engine_plane_20
+    4300014: glass_curved_3
+    4300016: plane_body_0
+    4300018: plane_rudderLarge_18
+    4300020: ship_frontEdge_6
+    4300022: ship_hull_1
+    4300024: wing_diagonalFin_11
+    4300026: wing_diagonalFin_12
+    4300028: wing_diagonalFin_15
+    4300030: wing_diagonalFin_16
+    4300032: wing_endLong_13
+    4300034: wing_endLong_17
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: f99635d81d07bf34598117e5386e2379, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 0871769da27c55b42a1711efc3a8d235, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blueSteel
+    second: {fileID: 2100000, guid: 00c0c3eeffc4b6f4c86226331a731e6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: engine
+    second: {fileID: 2100000, guid: af6da63f361c9cb41aed238dd84302ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 001d504987594ea4796399279f1aa6c3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
