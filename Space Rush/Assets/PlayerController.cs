@@ -20,7 +20,9 @@ public class PlayerController : MonoBehaviour {
         y = Player.position.y; x = Player.position.x;
 
         if (Input.GetKey("d"))
-        {rb.AddForce(force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);}
+        {rb.AddForce(force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+           
+        }
         if (Input.GetKey("a"))
         {rb.AddForce(-force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);}
         if (Input.GetKey("w"))
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey("s"))
         { rb.AddForce(0, -force * Time.deltaTime, 0, ForceMode.VelocityChange); }
 
-       
+        
 
     }
 
