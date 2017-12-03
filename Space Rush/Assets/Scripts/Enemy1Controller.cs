@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Enemy1Controller : MonoBehaviour {
 
-	public Rigidbody rb;
+	//public Rigidbody rb;
 	public float force = 200f;
 	public Transform Player;
 	Quaternion nQuaternion;
-	float m_Speed = 1.0f;
+	float m_Speed = 50;
 		
 
 	// Use this for initialization
 	void Start () {
+		//rb = GetComponent<Rigidbody>();
 		nQuaternion = new Quaternion();
 	}
 	
@@ -23,7 +24,7 @@ public class Enemy1Controller : MonoBehaviour {
     	Vector2 PlayerOnScreen = (Vector2)Player.transform.position;
     	float angle = AngleBetweenTwoPoints(positionOnScreen, PlayerOnScreen);
     	transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle+90));
-		rb.AddForce(force * Time.deltaTime, 0, 0, 0/*ForceMode.VelocityChange*/);
+		//rb.AddForce(0, force * Time.deltaTime, 0, ForceMode.VelocityChange);
 	}
 
 	float AngleBetweenTwoPoints(Vector3 angle1, Vector3 angle2)
