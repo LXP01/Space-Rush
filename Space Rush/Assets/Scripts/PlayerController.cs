@@ -35,22 +35,22 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey("d"))
         {
-            if (Player.position.x >= 164) { return; }
+            if (Player.position.x >= 100) { return; }
             else { rb.AddForce(force * Time.deltaTime, 0, 0, ForceMode.VelocityChange); }
         }
         if (Input.GetKey("a"))
         {
-            if (Player.position.x <= -164) { return; }
+            if (Player.position.x <= -100) { return; }
             rb.AddForce(-force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey("w"))
         {
-            if (Player.position.y >= 64.7) { return; }
+            if (Player.position.y >= 70) { return; }
             rb.AddForce(0, force * Time.deltaTime, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey("s"))
         {
-            if (Player.position.y <= -64.7) { return; }
+            if (Player.position.y <= -70) { return; }
             rb.AddForce(0, -force * Time.deltaTime, 0, ForceMode.VelocityChange);
         }
 
