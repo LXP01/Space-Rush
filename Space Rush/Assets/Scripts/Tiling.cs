@@ -2,63 +2,84 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(SpriteRenderer))]
+
+
 public class Tiling : MonoBehaviour {
 
-    // OBEN UND UNTEN FEHLT NOCH UND MUSS NOCH SCHÖNER WERDEN
+    public int offset = 2;
+    public bool leftBuddy = false, rightBuddy = false, skyBuddy = false, groundBuddy = false;
+    public bool reverseX = false;
+    public bool reverseY = false;
 
-    public int ofsetX = 2;
-    public bool hasARightBuddy = false;
-    public bool hasALeftBuddy = false;
-    public bool reverseScale = false;
-    private float spriteWidth = 0f;
+    private float spriteWidth = 0f,spriteHeight = 0f;
     private Camera cam;
-    private Transform myTransform;
+    private Transform trans;
 
-    void Awake()
+    private void Awake()
     {
         cam = Camera.main;
-        myTransform = transform;
+        trans = transform;
     }
-    void Start()
+    private void Start()
     {
         SpriteRenderer sRenderer = GetComponent<SpriteRenderer>();
         spriteWidth = sRenderer.sprite.bounds.size.x;
+        spriteHeight = sRenderer.sprite.bounds.size.y;
     }
-    void Update()
+    private void Update()
     {
-        if (hasALeftBuddy == false || hasARightBuddy == false)
+        if(leftBuddy ==false || rightBuddy == false || skyBuddy == false || groundBuddy == false)
         {
-            float camHorizontalExtend = cam.orthographicSize * Screen.width/Screen.height;
-            float edgeVisiblePositionRight = (myTransform.position.x + spriteWidth / 2) - camHorizontalExtend;
-            float edgeVisiblePositionLeft = (myTransform.position.x - spriteWidth / 2) + camHorizontalExtend;
-            if (cam.transform.position.x >= edgeVisiblePositionRight - ofsetX && hasARightBuddy == false)
+            float camHextend = cam.orthographicSize * Screen.width / Screen.height;
+            float camVextend = cam.orthographicSize * Screen.height/Screen.width;
+
+            float edgeVisiblePosRight = (trans.position.x + spriteWidth / 2) - camHextend;
+            float edgeVisiblePosLeft = (trans.position.x + spriteWidth / 2) + camHextend;
+            float edgeVisiblePosSky = (trans.position.y + spriteHeight / 2) - camVextend;
+            float edgeVisiblePosGround = (trans.position.y + spriteHeight / 2) + camVextend;
+
+            if(cam.transform.position.x >= edgeVisiblePosRight - offset && rightBuddy==false)
             {
-                MakeNewBuddy(10);
-                hasARightBuddy = true;
+                MakeNewBuddyX(1);
+                rightBuddy = true;
             }
-            else if (cam.transform.position.x <= edgeVisiblePositionLeft + ofsetX && hasALeftBuddy == false)
+            else if(cam.transform.position.x <= edgeVisiblePosLeft + offset && leftBuddy == false)
             {
-                MakeNewBuddy(-10);
-                hasALeftBuddy = true;
+                MakeNewBuddyX(-1);
+                leftBuddy = true;
+            }
+            else if(cam.transform.position.y >= edgeVisiblePosSky - offset && skyBuddy == false)
+            {
+                MakeNewBuddyY(1);
+                skyBuddy = true;
+            }
+            else if(cam.transform.position.y <= edgeVisiblePosGround + offset && groundBuddy == false)
+            {
+                MakeNewBuddyY(-1);
+                groundBuddy = true;
             }
         }
     }
-    void MakeNewBuddy(int RightorLeft)
+    void MakeNewBuddyX(int LoR)
     {
-        Vector3 newPosition = new Vector3(myTransform.position.x + spriteWidth * RightorLeft, myTransform.position.y, myTransform.position.z);
-        Transform newBuddy = Instantiate(myTransform, newPosition, myTransform.rotation) as Transform;
-        if (reverseScale == true)
-        {
-            newBuddy.localScale = new Vector3(newBuddy.localScale.x * -1, newBuddy.localScale.y, newBuddy.localScale.z);
-        }
-        newBuddy.parent = myTransform.parent;
-        if (RightorLeft > 0)
-        {
-            newBuddy.GetComponent<Tiling>().hasALeftBuddy = true;
-        }
-        else
-        {
-            newBuddy.GetComponent<Tiling>().hasARightBuddy = true;
-        }
+        Vector3 newPos = new Vector3(trans.position.x + spriteWidth * LoR, trans.position.y, trans.position.z);
+        Transform newBuddyX = Instantiate(trans,newPos,trans.rotation) as Transform;
+        if (reverseX == true) { newBuddyX.localScale = new Vector3(newBuddyX.localScale.x * -1, newBuddyX.localScale.y, newBuddyX.localScale.z); }
+        newBuddyX.parent = trans.parent;
+        if (LoR > 0)
+        {newBuddyX.GetComponent<Tiling>().leftBuddy = true;}
+        else if(LoR < 0) { newBuddyX.GetComponent<Tiling>().rightBuddy = true; }
+    }
+    void MakeNewBuddyY(int SoG)
+    {
+        Vector3 newPos = new Vector3(trans.position.x + spriteWidth * SoG, trans.position.y, trans.position.z);
+        Transform newBuddyY = Instantiate(trans, newPos, trans.rotation) as Transform;
+        if (reverseY == true) { newBuddyY.localScale = new Vector3(newBuddyY.localScale.x * -1, newBuddyY.localScale.y, newBuddyY.localScale.z); }
+        newBuddyY.parent = trans.parent;
+        if (SoG > 0)
+        { newBuddyY.GetComponent<Tiling>().skyBuddy = true; }
+        else if (SoG < 0) { newBuddyY.GetComponent<Tiling>().groundBuddy = true; }
     }
 }
