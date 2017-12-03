@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Enemy1Controller : MonoBehaviour {
 
+	public Rigidbody rb;
+	public float force = 200f;
 	public Transform Player;
 	Quaternion nQuaternion;
 	float m_Speed = 1.0f;
-	//public int rotationDamping = 3;
-	
+		
 
 	// Use this for initialization
 	void Start () {
@@ -17,17 +18,14 @@ public class Enemy1Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*Vector3 positionOnScreen = Player.position - transform.position;
-		transform.rotation = Quaternion.LookRotation(positionOnScreen);
-		var dir = Player.position - transform.position;
-     	var rotation = Quaternion.LookRotation(dir);
-     	/*transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
-		transform.rotation = Quaternion.FromToRotation(dir, Player.position);*/
-
-		nQuaternion.SetFromToRotation(transform.position, Player.position);
-		transform.position = Vector3.Lerp(transform.position, Player.position, m_Speed * Time.deltaTime);
-		transform.rotation = nQuaternion * transform.rotation;
+		
+		Vector2 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);
+    	Vector2 PlayerOnScreen = (Vector2)Player.transform.position;
+    	float angle = AngleBetweenTwoPoints(positionOnScreen, PlayerOnScreen);
+    	transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle+90));
+		rb.AddForce(force * Time.deltaTime, 0, 0, 0/*ForceMode.VelocityChange*/);
 	}
 
-	
+	float AngleBetweenTwoPoints(Vector3 angle1, Vector3 angle2)
+   	{return Mathf.Atan2(angle1.y - angle2.y, angle1.x - angle2.x) * Mathf.Rad2Deg; }
 }

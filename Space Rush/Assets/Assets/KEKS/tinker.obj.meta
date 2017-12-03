@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 4163a9d5dc8f27b4cb5c37eb2f958ab3
 timeCreated: 1512308056
+=======
+guid: 56e978b16667ba149ac8ef7a0bd70890
+timeCreated: 1512304739
+>>>>>>> 768393a1beb7facc83be0126a9e4d8e459b20c58
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -22,12 +27,20 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: color_12486502
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 93df3fb00241d1543b803221bf298a62, type: 2}
+=======
+    second: {fileID: 2100000, guid: 19ff201d052ff6749b84a1e63afb4f85, type: 2}
+>>>>>>> 768393a1beb7facc83be0126a9e4d8e459b20c58
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: color_5781275
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: a11f8cd828af1834488112047153b72a, type: 2}
+=======
+    second: {fileID: 2100000, guid: 7e99ff20126ac5446aaa5ca36fbfd088, type: 2}
+>>>>>>> 768393a1beb7facc83be0126a9e4d8e459b20c58
   materials:
     importMaterials: 1
     materialName: 0
