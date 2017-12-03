@@ -50,8 +50,20 @@ public class Camera2DFollow : MonoBehaviour {
 
 		transform.position = newPos;
 		
-		lastTargetPosition = target.position;		
-	}
+		lastTargetPosition = target.position;
+
+
+
+
+        if (GameObject.Find("Player") != null)
+        {
+            target = GameObject.Find("Player").transform;
+        }
+        if (target == null) { return; }
+
+
+
+    }
 
 	void FindPlayer () {
 		if (nextTimeToSearch <= Time.time) {

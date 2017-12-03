@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour {
 
     [System.Serializable]
-    public class playerStats
+    public class CplayerStats
     {
         public
             float Health = 1000f;
     }
 
-    public playerStats stats = new playerStats();
+    public CplayerStats stats = new CplayerStats();
     
 
     private void Update()
@@ -25,7 +25,9 @@ public class PlayerStats : MonoBehaviour {
         stats.Health -= damage;
         if (stats.Health <= 0)
         {
-            KillPlayer.Kill(this);
+            GameMaster.KillPlayer(this);
+            stats.Health = 100f;
+            GameMaster.gm.RespawnPlayer();
         }
     }
     
