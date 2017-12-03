@@ -66,7 +66,7 @@ public class Tiling : MonoBehaviour {
     {
         Vector3 newPos = new Vector3(trans.position.x + spriteWidth * LoR, trans.position.y, trans.position.z);
         Transform newBuddyX = Instantiate(trans,newPos,trans.rotation) as Transform;
-        if (reverseX == true) { newBuddyX.localScale = new Vector3(newBuddyX.localScale.x * -1, newBuddyX.localScale.y, newBuddyX.localScale.z); }
+       // if (reverseX == true) { newBuddyX.localScale = new Vector3(newBuddyX.localScale.x * -1, newBuddyX.localScale.y, newBuddyX.localScale.z); }
         newBuddyX.parent = trans.parent;
         if (LoR > 0)
         {newBuddyX.GetComponent<Tiling>().leftBuddy = true;}
@@ -74,9 +74,9 @@ public class Tiling : MonoBehaviour {
     }
     void MakeNewBuddyY(int SoG)
     {
-        Vector3 newPos = new Vector3(trans.position.x + spriteWidth * SoG, trans.position.y, trans.position.z);
+        Vector3 newPos = new Vector3(trans.position.x, trans.position.y + spriteHeight * SoG, trans.position.z);
         Transform newBuddyY = Instantiate(trans, newPos, trans.rotation) as Transform;
-        if (reverseY == true) { newBuddyY.localScale = new Vector3(newBuddyY.localScale.x * -1, newBuddyY.localScale.y, newBuddyY.localScale.z); }
+       // if (reverseY == true) { newBuddyY.localScale = new Vector3(newBuddyY.localScale.x * -1, newBuddyY.localScale.y, newBuddyY.localScale.z); }
         newBuddyY.parent = trans.parent;
         if (SoG > 0)
         { newBuddyY.GetComponent<Tiling>().skyBuddy = true; }

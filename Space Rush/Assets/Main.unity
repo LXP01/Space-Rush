@@ -197,10 +197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f8525aaef8b2c4781a656a64b85ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ofsetX: 2
-  hasARightBuddy: 0
-  hasALeftBuddy: 0
-  reverseScale: 0
+  offset: 2
+  leftBuddy: 0
+  rightBuddy: 0
+  skyBuddy: 0
+  groundBuddy: 0
+  reverseX: 0
+  reverseY: 0
 --- !u!4 &465123929 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 00691651e497a4c478942b4cd9103877, type: 3}
