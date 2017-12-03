@@ -10,7 +10,21 @@ public class PlayerController : MonoBehaviour {
 
     public float x=0f, y=0f;
 
+    public GameObject shot;
+    public Transform shotspawn;
+    public float fireRate;
+    private float nextFire;
 
+    void Update()
+    {
+        if (Input.GetMouseButton(0) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, shotspawn.position, shotspawn.rotation);
+        }
+
+        
+    }
 	
 	
 	void FixedUpdate ()
@@ -20,9 +34,7 @@ public class PlayerController : MonoBehaviour {
         y = Player.position.y; x = Player.position.x;
 
         if (Input.GetKey("d"))
-        {rb.AddForce(force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-           
-        }
+        {rb.AddForce(force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);}
         if (Input.GetKey("a"))
         {rb.AddForce(-force * Time.deltaTime, 0, 0, ForceMode.VelocityChange);}
         if (Input.GetKey("w"))
