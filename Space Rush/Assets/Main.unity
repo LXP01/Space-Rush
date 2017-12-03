@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -185,6 +185,53 @@ Transform:
   m_Father: {fileID: 524695887}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1001 &357275897
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067353349515458, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215130127365466, guid: 385a66c67e311a34eb46a9d424117de4,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1815803844}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 385a66c67e311a34eb46a9d424117de4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &465123929 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 00691651e497a4c478942b4cd9103877, type: 3}
