@@ -25,6 +25,10 @@ public class Enemy1Controller : MonoBehaviour {
     	float angle = AngleBetweenTwoPoints(positionOnScreen, PlayerOnScreen);
     	transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle+90));
 		//rb.AddForce(0, force * Time.deltaTime, 0, ForceMode.VelocityChange);
+
+		nQuaternion.SetFromToRotation(transform.position, Player.position);
+		transform.position = Vector3.Lerp(transform.position, Player.position, m_Speed * Time.deltaTime);
+		transform.rotation = nQuaternion * transform.rotation;
 	}
 
 	float AngleBetweenTwoPoints(Vector3 angle1, Vector3 angle2)
