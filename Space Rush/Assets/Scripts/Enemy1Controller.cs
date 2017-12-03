@@ -5,10 +5,10 @@ using UnityEngine;
 public class Enemy1Controller : MonoBehaviour {
 
 	//public Rigidbody rb;
-	public float force = 200f;
+	public float force = 50f;
 	public Transform Player;
 	Quaternion nQuaternion;
-	float m_Speed = 50;
+	
 		
 
 	// Use this for initialization
@@ -27,8 +27,8 @@ public class Enemy1Controller : MonoBehaviour {
 		//rb.AddForce(0, force * Time.deltaTime, 0, ForceMode.VelocityChange);
 
 		nQuaternion.SetFromToRotation(transform.position, Player.position);
-		transform.position = Vector3.Lerp(transform.position, Player.position, m_Speed * Time.deltaTime);
-		transform.rotation = nQuaternion * transform.rotation;
+		transform.position = Vector3.Lerp(transform.position, Player.position, force * Time.deltaTime);
+		//transform.rotation = nQuaternion * transform.rotation;
 	}
 
 	float AngleBetweenTwoPoints(Vector3 angle1, Vector3 angle2)
