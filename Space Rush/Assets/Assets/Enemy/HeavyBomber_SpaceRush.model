@@ -1,0 +1,45 @@
+# Made using Asset Forge (1.2.1)
+
+:models
+Aircraft/plane_body[(0, 0, 0.5);(0.0, 0.0, 0.0);(3.0, 1.0, 2.0);(0.0, 0.0, 0.0);_defaultMat+blueSteel]
+Aircraft/glass_round[(-0.4, 0.5, -1.25);(0.0, 0.0, 0.0);(1.2, 1.0, 1.5);(0.0, 0.0, 0.0);glass+blueSteel]
+Aircraft/glass_round[(0.4, 0.5, -1.25);(0.0, 0.0, 0.0);(1.2, 1.0, 1.5);(0.0, 0.0, 0.0);glass+blueSteel]
+Aircraft/ship_cargoFront[(0, 0.5, -1.5);(0.0, 0.0, 0.0);(-2.2, -1.0, 2.0);(0.0, 0.0, 0.0);_defaultMat+blueSteel]
+Aircraft/ship_hull[(-1.5, 0.6, 0);(0.0, 0.0, 0.0);(2.0, -1.0, 1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/ship_hull[(1.5, 0.6, 0);(0.0, 0.0, 0.0);(2.0, -1.0, 1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/ship_frontSquare[(2, 0.6, -1);(0.0, 0.0, 0.0);(1.0, -1.0, 1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/ship_frontSquare[(-2, 0.6, -1);(0.0, 0.0, 0.0);(1.0, -1.0, 1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/ship_frontEdge[(-1.5, 0.6, 1);(0.0, 0.0, 0.0);(2.0, -1.0, -1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/ship_frontEdge[(1.5, 0.6, 1);(0.0, 0.0, 0.0);(2.0, -1.0, -1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/engine_intake[(0, 1, 0.5);(0.0, 0.0, 0.0);(1.2, 1.0, 2.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat+black]
+Aircraft/engine_large[(-2, 0.2, -1.2);(0.0, 0.0, 0.0);(1.2, 1.0, -1.4);(0.0, 0.0, 0.0);_defaultMat+engine+black]
+Aircraft/engine_large[(2, 0.2, -1.2);(0.0, 0.0, 0.0);(1.2, 1.0, -1.4);(0.0, 0.0, 0.0);_defaultMat+engine+black]
+Aircraft/engine_corner[(2, 0.5, 0);(0.0, 0.0, 0.0);(1.0, 1.3, 1.6);(0.0, 0.0, 0.0);_defaultMat+blueSteel+black]
+Aircraft/ship_sidePanel[(3.1, 0, -0.5);(0.0, 0.0, 0.0);(1.2, 1.5, 2.0);(0.0, 0.0, 0.0);_defaultMat+blueSteel]
+Aircraft/ship_sidePanel[(-3, 0, -0.5);(0.0, 0.0, 0.0);(-1.0, 1.5, 2.0);(0.0, 0.0, 0.0);_defaultMat+blueSteel]
+Aircraft/engine_corner[(-2, 0.5, 0);(0.0, 0.0, 0.0);(-1.0, 1.3, 1.6);(0.0, 0.0, 0.0);_defaultMat+blueSteel+black]
+Aircraft/ship_cargoFront[(0, 1, 2);(0.0, 0.0, 0.0);(-1.4, 1.0, -1.0);(0.0, 0.0, 0.0);_defaultMat+blueSteel]
+Aircraft/plane_rudder[(0, 0.5, -1.1);(0.0, 0.0, 0.0);(1.0, 1.1, 3.0);(0.0, 0.0, 0.0);_defaultMat]
+Aircraft/plane_rudder[(1.19E-07, 0.6, -1.95);(90.0, 180.0, 0.0);(1.0, 0.5, 1.0);(0.0, 0.0, 0.0);_defaultMat]
+Aircraft/plane_rudder[(0, 0.8, -1.1);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);(0.0, 0.0, 0.0);_defaultMat]
+Aircraft/plane_rudderLarge[(0, -5.96E-08, -0.05);(0.0, 0.0, 0.0);(-4.0, -1.0, 2.3);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/plane_end[(0, 0, 2.3);(0.0, 0.0, 0.0);(1.8, 1.0, 1.6);(0.0, 0.0, 0.0);_defaultMat+blueSteel]
+Aircraft/wing_diagonalFin[(3, 1, -0.55);(0.0, 0.0, 0.0);(1.0, 1.0, 2.1);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/wing_diagonalFin[(-3, 1, -0.5);(0.0, 0.0, 0.0);(-1.0, 1.0, 2.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/wing_diagonalFin[(1.45, 0.5, 2.4);(0.0, 0.0, 0.0);(1.9, 1.0, 1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/wing_diagonalFin[(-1.45, 0.5, 2.4);(0.0, 0.0, 0.0);(-1.9, 1.0, 1.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/wing_diagonalFin[(-3, 0.3, -0.5);(0.0, 0.0, 0.0);(-1.0, -1.0, 2.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/wing_diagonalFin[(3, 0.3, -0.5);(0.0, 0.0, 0.0);(1.0, -1.0, 2.0);(0.0, 0.0, 0.0);blueSteel+_defaultMat]
+Aircraft/detrail_strut[(-0.7, 0.5, -1.2);(0.0, 180.0, 0.0);(0.7, 0.5, -1.5);(0.0, 0.0, 0.0);_defaultMat]
+Aircraft/detrail_strut[(1.35, 0.5, -1.25);(0.0, 0.0, 0.0);(-0.7, 0.5, 1.5);(0.0, 0.0, 0.0);_defaultMat]
+
+:materials
+_defaultMat[RGBA(0.070, 0.069, 0.069, 1.000);]
+blueSteel[RGBA(0.686, 0.000, 0.000, 1.000);]
+glass[RGBA(0.298, 0.314, 0.365, 1.000);]
+black[RGBA(0.267, 0.267, 0.267, 1.000);]
+engine[RGBA(0.061, 0.172, 0.410, 1.000);]
+
+:textures
+
+:extra
