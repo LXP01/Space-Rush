@@ -52,13 +52,8 @@ public class PlayerController : MonoBehaviour
         {
             if (Player.position.y <= -70) { return; }
             rb.AddForce(0, -force * Time.deltaTime, 0, ForceMode.VelocityChange);
-        }
-
-
-           
+        }      
     }
-
-
-    }
+}
 
 
