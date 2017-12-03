@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 7079ff6319493a3438de2a1bbe66e4c6
-timeCreated: 1512308056
-=======
-guid: 4992ad95221643b4a8452d90e7fecc12
-timeCreated: 1512303976
->>>>>>> 768393a1beb7facc83be0126a9e4d8e459b20c58
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -17,6 +10,7 @@ ModelImporter:
     2300000: default
     3300000: default
     4300000: default
+    9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -32,11 +26,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: customMaterial3
-<<<<<<< HEAD
     second: {fileID: 2100000, guid: a5cb030456de50d4d9d3878b0ef98ee0, type: 2}
-=======
-    second: {fileID: 2100000, guid: fe38243e886ebb84e90b1bce189d5a89, type: 2}
->>>>>>> 768393a1beb7facc83be0126a9e4d8e459b20c58
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -118,7 +108,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
