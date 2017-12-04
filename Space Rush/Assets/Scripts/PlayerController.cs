@@ -25,8 +25,6 @@ public class PlayerController : MonoBehaviour
         }
         Debug.Log(Player.position);
     }
-
-
     void FixedUpdate()
     {
 

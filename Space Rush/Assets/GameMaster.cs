@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameMaster : MonoBehaviour {
 
     public static GameMaster gm;
-
     
 
     void Start()
@@ -16,19 +15,22 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
-    public Transform playerPrefab;
+    public GameObject Player;
     public Transform spawnPoint;
     public int spawnDelay = 2;
-
+    public Transform Shot;
     public void RespawnPlayer()
     {
-        Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(Player, spawnPoint.position, spawnPoint.rotation);
     }
 
     public static void KillPlayer(PlayerStats player)
     {
-        Destroy(player.gameObject);
+        DestroyObject(player.gameObject);
         gm.RespawnPlayer();
     }
+
+    
+
 
 }

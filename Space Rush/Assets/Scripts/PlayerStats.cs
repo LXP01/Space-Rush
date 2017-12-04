@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour {
 
     private void Update()
     {
-        DamagePlayer(1);
+        //DamagePlayer(1);
         //Debug.Log(stats.Health);
     }
 
@@ -26,8 +26,11 @@ public class PlayerStats : MonoBehaviour {
         if (stats.Health <= 0)
         {
             GameMaster.KillPlayer(this);
-            stats.Health = 100f;
-            GameMaster.gm.RespawnPlayer();
+            //stats.Health = 100f;
+            if (Input.anyKey == true)
+            {
+                GameMaster.gm.RespawnPlayer();
+            }
         }
     }
     
